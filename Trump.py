@@ -8,7 +8,7 @@ bot = commands.Bot(command_prefix='!',status=discord.Status.online,activity=game
 @bot.event
 async def on_message(message):
     message_content = message.content
-    if message_content.find("tiktok") >= 0 or message_content.find("vt.com") >= 0:
+    if message_content.lower().find("tiktok") >= 0 or message_content.lower().find("vt.com") >= 0:
         await message.channel.send("틱톡은 우리 나라에선 금지다")
         await message.delete()
     if message_content.find("트럼프") >= 0:
