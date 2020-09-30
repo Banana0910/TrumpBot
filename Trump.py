@@ -1,8 +1,7 @@
-import asyncio,discord
+import asyncio,discord,os
 from discord.ext import commands
 from random import *
 
-token = "NzYwODYyMjgyNzAzMTc1Njgw.X3SOOA.sLipEbDKmqC1ucweY2oaBaVhafQ"
 game = discord.Game("틱톡 감시")
 bot = commands.Bot(command_prefix='!',status=discord.Status.online,activity=game)
 
@@ -24,4 +23,5 @@ async def on_message(message):
             await message.channel.send("틱톡은 없어져야 한다고 생각하네")
     await bot.process_commands(message)
     
-bot.run(token)
+access_token = os.environ['BOT_TOKEN']
+bot.run(access_token)
