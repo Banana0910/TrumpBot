@@ -1,0 +1,27 @@
+import asyncio,discord
+from discord.ext import commands
+from random import *
+
+token = "NzYwODYyMjgyNzAzMTc1Njgw.X3SOOA.sLipEbDKmqC1ucweY2oaBaVhafQ"
+game = discord.Game("틱톡 감시")
+bot = commands.Bot(command_prefix='!',status=discord.Status.online,activity=game)
+
+@bot.event
+async def on_message(message):
+    message_content = message.content
+    if message_content.find("tiktok") >= 0 or message_content.find("vt.com") >= 0:
+        await message.channel.send("틱톡은 우리 나라에선 금지다")
+        await message.delete()
+    if message_content.find("트럼프") >= 0:
+        i = randint(1,4)
+        if i == 1:
+            await message.channel.send("왜 불렀는가?")
+        elif i == 2:
+            await message.channel.send("나는 틱톡을 우리 나라에서 금지 시켰지")
+        elif i == 3:
+            await message.channel.send("무슨 문제라도 있는가?")
+        elif i == 4:
+            await message.channel.send("틱톡은 없어져야 한다고 생각하네")
+    await bot.process_commands(message)
+    
+bot.run(token)
