@@ -16,7 +16,7 @@ async def on_message(message):
         if i == 1:
             await message.channel.send("왜 불렀는가??")
         elif i == 2:
-            await message.channel.send("나는 틱톡을 우리 나라에서 금지 시켰지")
+            await message.channel.send("나는 틱톡을 우리 나라에서 금지 시켰지..")
         elif i == 3:
             await message.channel.send("무슨 문제라도 있는가?")
         elif i == 4:
