@@ -14,7 +14,7 @@ async def on_message(message):
     if message_content.find("트럼프") >= 0:
         i = randint(1,5)
         if i == 1:
-            await message.channel.send("왜 불렀는가?")
+            await message.channel.send("왜 불렀는가??")
         elif i == 2:
             await message.channel.send("나는 틱톡을 우리 나라에서 금지 시켰지")
         elif i == 3:
