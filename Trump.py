@@ -23,7 +23,7 @@ async def on_message(message):
             await message.channel.send("틱톡은 없어져야 한다고 생각하네")
         elif i == 5:
             await message.channel.send("바이든 Go Fuck Your Self")
-    if message_content.find("바이든") >= 0:
+    elif message_content.find("바이든") >= 0:
         i = randint(1,3)
         if i == 1:
             await message.channel.send("어우 저 씹새키")
