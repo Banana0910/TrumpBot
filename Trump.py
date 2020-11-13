@@ -11,6 +11,7 @@ async def on_message(message):
     if message_content.lower().find("tiktok") >= 0 or message_content.lower().find("vt.com") >= 0:
         await message.channel.send("틱톡은 우리 나라에선 금지다")
         await message.delete()
+        
     if message_content.find("트럼프") >= 0:
         i = randint(1,5)
         if i == 1:
@@ -23,6 +24,7 @@ async def on_message(message):
             await message.channel.send("틱톡은 없어져야 한다고 생각하네")
         elif i == 5:
             await message.channel.send("바이든 Go Fuck Your Self")
+            
     elif message_content.find("바이든") >= 0:
         i = randint(1,3)
         if i == 1:
@@ -31,7 +33,7 @@ async def on_message(message):
             await message.channel.send("바이든 뒤졌으면^^")
         elif i == 3:
             await message.channel.send("바이든 그는 왜 살고 있는걸까요")
+            
     await bot.process_commands(message)
-    
 access_token = os.environ['BOT_TOKEN']
 bot.run(access_token)
