@@ -27,7 +27,7 @@ async def on_message(message):
         elif i == 5:
             await message.channel.send("바이든 Go Fuck Your Self")
         elif i == 6:
-            await message.channel.send("먼데 주인 어디?")
+            await message.channel.send("음.. 이 방에 '아벌구'가 있는듯하구만")
             
     elif message_content.find("바이든") >= 0:
         i = randint(1,3)
