@@ -11,6 +11,9 @@ async def on_message(message):
     if message.author.bot:
             return None
         
+    if message_content.lower().find("help") :
+        await message.channel.send("내가 자네에게 줄 수 있는 도움 따위는 없다네")
+        
     if message_content.lower().find("tiktok") >= 0 or message_content.lower().find("vt.com") >= 0:
         await message.channel.send("틱톡은 우리 나라에선 금지다")
         await message.delete()
@@ -39,7 +42,7 @@ async def on_message(message):
         elif i == 3:
             await message.channel.send("바이든 그는 왜 살고 있는걸까요")
         elif i == 4:
-            await message.channel.send("선거 내가 이긴건데.. ㄲㅂ)
+            await message.channel.send("선거 내가 이긴건데.. ㄲㅂ")
             
     await bot.process_commands(message)
 access_token = os.environ['BOT_TOKEN']
