@@ -32,7 +32,7 @@ async def on_message(message):
         elif i == 6:
             await message.channel.send("음.. 이 방에 '아벌구'가 있는듯하구만")
         elif i == 7:
-            await message.channel.send("영재원 개같딩")
+            await message.channel.send("영재원 개같ㄷ 살려")
             
     elif message_content.find("바이든") >= 0:
         i = randint(1,4)
