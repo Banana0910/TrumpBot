@@ -5,14 +5,15 @@ from random import *
 game = discord.Game("틱톡 감시")
 bot = commands.Bot(command_prefix='!',status=discord.Status.online,activity=game)
 
+@bot.command()
+async def help(ctx) :
+    await ctx.send("내가 자네에게 줄 도움 따위는 없다네")
+    
 @bot.event
 async def on_message(message):
     message_content = message.content
     if message.author.bot:
             return None
-        
-    if message_content.lower().find("help") :
-        await message.channel.send("내가 자네에게 줄 수 있는 도움 따위는 없다네")
         
     if message_content.lower().find("tiktok") >= 0 or message_content.lower().find("vt.com") >= 0:
         await message.channel.send("틱톡은 우리 나라에선 금지다")
