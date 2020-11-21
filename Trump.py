@@ -5,9 +5,9 @@ from random import *
 game = discord.Game("틱톡 감시")
 bot = commands.Bot(command_prefix='!',status=discord.Status.online,activity=game)
 
-@bot.command()
-async def help(ctx) :
-    await ctx.send("내가 자네에게 줄 도움 따위는 없다네")
+@commands.command(name="help")
+async def help_command(self, ctx, func=None):
+    await message.channel.send("내가 자네에게 줄 도움 따위는 없다네")
     
 @bot.event
 async def on_message(message):
