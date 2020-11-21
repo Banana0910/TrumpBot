@@ -33,13 +33,15 @@ async def on_message(message):
             await message.channel.send("음.. 이 방에 '아벌구'가 있는듯하구만")
             
     elif message_content.find("바이든") >= 0:
-        i = randint(1,3)
+        i = randint(1,4)
         if i == 1:
             await message.channel.send("어우 저 씹새키")
         elif i == 2:
             await message.channel.send("바이든 뒤졌으면^^")
         elif i == 3:
             await message.channel.send("바이든 그는 왜 살고 있는걸까요")
+        elif i == 4:
+            await message.channel.send("선거 내가 이긴건데.. ㄲㅂ)
             
     await bot.process_commands(message)
 access_token = os.environ['BOT_TOKEN']
